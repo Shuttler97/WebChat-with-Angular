@@ -1,0 +1,16 @@
+img{
+  border-radius: 50%;
+  max-width: 100%;
+  height: 50px!important;
+}
+p{
+  font-size: 15px;
+  color: #757575;
+}
+mat-toolbar{
+  line-height: 4px;
+}
+h3{
+  font-family: 'Nunito', sans-serif;
+}
+

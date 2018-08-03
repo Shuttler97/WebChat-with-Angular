@@ -1,0 +1,14 @@
+.recent-chats{
+  background: white;
+  padding: 15px 0px;
+  color: #757575;
+  border: .5px solid #EEEEEE;
+  border-opacity :.5;
+  text-align: center;
+  border-radius: 5px;
+}
+img{
+  border-radius: 50%;
+  max-width: 100%;
+  height: 50px!important;
+}
