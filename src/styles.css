@@ -10,10 +10,7 @@ p{
 .h3{
   font-family: 'Nunito', sans-serif;
 }
-i{
-  font-size: 30px!important;
-}
-.material-icons{
+mat-icon{
   color: #757575;
   font-size: 18px;
 }

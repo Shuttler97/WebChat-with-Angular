@@ -3,7 +3,14 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
- import {MatButtonModule, MatCheckboxModule, MatInputModule, MatToolbarModule} from '@angular/material';
+ import {
+  MatButtonModule,
+  MatCheckboxModule,
+   MatIconModule,
+  MatInputModule,
+  MatMenuModule,
+  MatToolbarModule,
+} from '@angular/material';
 import {FlexLayoutModule} from "@angular/flex-layout";
 import { ProfileComponent } from './profile/profile.component';
 import { ChatInfoComponent } from './chat-info/chat-info.component';
@@ -35,7 +42,9 @@ import { UserRecentComponentComponent } from './user-recent-component/user-recen
     FlexLayoutModule,
     MatToolbarModule,
     FormsModule,
-    MatInputModule
+    MatInputModule,
+    MatMenuModule,
+    MatIconModule,
 
   ],
   providers: [],

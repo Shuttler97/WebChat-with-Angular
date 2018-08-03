@@ -1,21 +1,9 @@
-mat-toolbar {
-  line-height: 10px;
-  font-size: 20px;
-}
-mat-form-field{
-  border-radius: 50px;
-  width: 850px;
-  padding-bottom: 0px !important;
-}
-md-input-container {
-  margin-right: 10px;
-  border-radius: 5px;
-  padding-bottom: 0px !important;
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
 }
 
-.mat-input-wrapper {
-  padding-bottom: 0px !important;
-}
-/deep/ .mat-input-placeholder {
-  font-size: 5px !important;
-}

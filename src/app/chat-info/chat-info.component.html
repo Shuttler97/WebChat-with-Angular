@@ -11,15 +11,35 @@
       </div>
     </div>
     <div style="width: 20%" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="25px">
-    <i class="material-icons">
-      search
-    </i>
-    <i class="material-icons">
-      attach_file
-    </i>
-    <i class="material-icons">
-      more_vert
-    </i>
-  </div>
+
+      <button mat-icon-button> <mat-icon>search</mat-icon></button>
+      <button mat-icon-button> <mat-icon>attach_files</mat-icon></button>
+
+      <button mat-icon-button [matMenuTriggerFor]="menu" >
+        <mat-icon>more_vert</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu" [overlapTrigger]="false">
+        <button mat-menu-item>
+          <span>Contact info</span>
+        </button>
+        <button mat-menu-item>
+
+          <span>Select-Messages</span>
+        </button>
+        <button mat-menu-item>
+
+          <span>Mute</span>
+        </button>
+        <button mat-menu-item>
+
+          <span>Clear Message</span>
+        </button>
+        <button mat-menu-item>
+
+          <span>Delete Chat</span>
+        </button>
+
+      </mat-menu>
+    </div>
   </div>
 </mat-toolbar>
