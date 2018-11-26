@@ -1,8 +1,64 @@
-mat-form-field{
-  border-radius: 50px;
-  width: 80%;
-  padding-bottom: 0px !important;
+body {
+  background: #DDD;
+  font-size: 15px;
 }
-mat-form-field{
+#wrap {
+  display: block;
+  position: relative;
+  height: 20px;
+  float: right;
   padding: 0px!important;
+
+}
+
+input[type="text"] {
+  height: 25px;
+  font-size: 20px;
+  display: inline-block;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 100;
+  border: none;
+  outline: none;
+  color: black;
+  padding-right: 60px;
+  width: 0px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: none;
+  z-index: 3;
+  transition: width .4s cubic-bezier(0.000, 0.795, 0.000, 1.000);
+  cursor: pointer;
+}
+
+input[type="text"]:focus:hover {
+  border-bottom: 1px solid #BBB;
+}
+
+input[type="text"]:focus {
+  width: 250px;
+  z-index: 1;
+  cursor: text;
+}
+input[type="submit"] {
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+  color:red;
+  float: right;
+  background:  url("../../assets/images/search-icon.png") center center no-repeat;
+  text-indent: -10000px;
+  border: none;
+  position: absolute;
+  outline: none;
+
+  right: 0;
+  z-index: 2;
+  cursor: pointer;
+  opacity: 0.4;
+  transition: opacity .4s ease;
+}
+
+input[type="submit"]:hover {
+  opacity: 1;
 }

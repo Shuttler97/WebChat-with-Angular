@@ -1,0 +1,30 @@
+  <div fxLayout="column" fxLayoutAlign="start stretch">
+  <div  fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="25px" style="padding: 10px; border-bottom: 1px dotted #cccccc">
+    <button class="btn"  (click)="ImageInput.click()">
+      <div fxLayout="row" fxLayoutAlign="center center">
+        <img src="../../assets/images/image_thumbnail.png">Images / Photos
+        <input #ImageInput type="file"
+               accept="image/x-png,image/gif,image/jpeg"  style="display:none;" />
+      </div>
+    </button>
+    <button class="btn" (click)="emojiInput.click()">
+      <div fxLayout="row" fxLayoutAlign="center center">
+        <img src="../../assets/images/feeling_emoji.png">Feelings / Activity
+        <input #emojiInput type="file"
+               accept="image/x-png,image/gif,image/jpeg"  style="display:none;" />
+      </div>
+    </button>
+    <button class="btn"  (click)="attachInput.click()">
+      <div  fxLayout="row" fxLayoutAlign="center center">
+        <img  src="../../assets/images/attach.png">Links / Docs
+        <input #attachInput type="file"
+               accept="image/x-png,image/gif,image/jpeg"  style="display:none;">
+      </div>
+    </button>
+  </div>
+  <textarea placeholder="What's your mind ?" #inputText  matInput matTextareaAutosize matAutosizeMinRows=1 matAutosizeMaxRows=3></textarea>
+  <div fxLayout="row" fxLayoutAlign="end end" >
+    <button mat-flat-button style="background-color: #448AFF;color: white" (click)="postButtonClicked()">
+      <p><b>Post</b></p></button>
+  </div>
+</div>

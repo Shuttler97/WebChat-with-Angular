@@ -1,0 +1,25 @@
+.layer {
+  background-color: rgba(0,0,0, 0.5);
+  background-size: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+button:hover{
+  background-color:black;
+  outline-color: white;
+  color: white;
+}
+mat-card:hover{
+  box-shadow: 5px 5px;
+ border-radius: 5px;
+}
+
+mat-icon{
+  color: black;
+  padding: 0px;
+}
+
+

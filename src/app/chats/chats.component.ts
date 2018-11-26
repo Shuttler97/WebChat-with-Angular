@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+
 
 @Component({
   selector: 'app-chats',
@@ -6,10 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./chats.component.css']
 })
 export class ChatsComponent implements OnInit {
+  messages: Array<string> = [];
+  newMessage: string;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }
 
+  updateMessage(data: string) {
+    this.newMessage = data;
+    this.messages.push(this.newMessage );
+  }
 }
+
+

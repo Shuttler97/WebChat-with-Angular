@@ -1,0 +1,29 @@
+<mat-sidenav-container style="height: 100vh">
+    <mat-sidenav mode="side" opened>
+    <div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="35px" style="margin-top: 15px;">
+      <p> Dimlight</p>
+      <div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="35px" style="padding-top: 50px">
+        <button mat-icon-button routerLink="/main"><mat-icon>perm_identity</mat-icon></button>
+        <button mat-icon-button> <mat-icon>group_add_outline</mat-icon></button>
+        <button mat-icon-button><mat-icon>people_outline</mat-icon></button>
+        <button mat-icon-button> <mat-icon>attach_file</mat-icon></button>
+        <img src="../../assets/images/avatar2.png" class="image"  >
+      </div>
+    </div>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <div fxLayout="column" fxLayoutAlign="start stretch" fxLayoutGap="50px" style="background-color:#FAFAFA">
+      <app-user-post-header></app-user-post-header>
+        <div style="width: 80%; margin-top: 20px" fxLayout="column" fxLayoutAlign="center stretch" fxLayoutGap="10px">
+        <app-post-bar (addNewPost)="updatePost($event)" ></app-post-bar>
+        <app-post-card
+          *ngFor="let post of posts | invert">
+          <p>{{post}}</p>
+        </app-post-card>
+          </div>
+      <div style="width: 10%">
+      </div>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+

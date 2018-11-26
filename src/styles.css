@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 *{
   padding: 0;
@@ -13,4 +14,28 @@ p{
 mat-icon{
   color: #757575;
   font-size: 18px;
+}
+body{
+  background: url("/assets/images/bg-01.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.emoji{
+  display:inline-block;
+}
+.mat-dialog-container{
+  box-shadow: none !important;
+  border:1px solid #cccccc;
+  padding: 15px;
+  border-radius: 10px!important;
+
+}
+.btn{
+  color: #616161;
+  background-color: #F5F5F5;
+  border-radius: 10px;
+  padding: 8px;
+  border: none;
+  cursor: pointer;
+
 }

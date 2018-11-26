@@ -1,0 +1,102 @@
+
+body {
+  font-size: 16px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  color: #888;
+  font-family: 'Nunito', sans-serif;
+  font-weight: bold;
+  outline: none;
+  box-sizing: border-box;
+}
+
+
+
+.clearfix {
+  display: table;
+  overflow: hidden;
+}
+.clearfix:before {
+  content: " ";
+  display: block;
+}
+
+
+
+.chat-wrapper {
+  width: 100%;
+  display: table;
+  overflow: hidden;
+}
+.chat-wrapper:before {
+  content: " ";
+  display: block;
+}
+.chat-wrapper .chat-content {
+  background-color: #fff;
+}
+.chat-wrapper .chat-message {
+  padding-bottom: 2px;
+  width: 100%;
+  display: table;
+  overflow: hidden;
+}
+.chat-wrapper .chat-message:before {
+  content: " ";
+  display: block;
+}
+
+.chat-wrapper .chat-message .chat-message-wrapper {
+  max-width: 20%;
+  display: table;
+  margin: 0 20px;
+  padding-top: 10px;
+  bottom: 0px;
+  position: relative;
+}
+.chat-wrapper .chat-message .chat-message-wrapper:before {
+  content: " ";
+  display: block;
+  width: 0;
+  height: 0;
+  border: 12px solid transparent;
+  top: 20px;
+  position: absolute;
+  z-index: 2;
+}
+.chat-wrapper .chat-message .chat-message-wrapper p {
+  padding: 6px 10px;
+  color: black;
+  min-width: 50px;
+  min-height: 65px;
+}
+
+.chat-wrapper .chat-message.chat-message-sender .chat-message-wrapper,
+.chat-wrapper .chat-message.chat-message-sender .chat-message-content {
+  float: right;
+}
+.chat-wrapper .chat-message.chat-message-sender .chat-message-wrapper:before {
+  right: -20px;
+  border-left-color:  #91D98A;
+}
+.chat-wrapper .chat-message.chat-message-sender p {
+  background:  #91D98A;
+
+}
+.chat-wrapper .chat-message.chat-message-sender img {
+  float: right;
+}
+.chat-wrapper .chat-message .chat-message-content {
+  display: table;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+span{
+  padding-left: 5px;
+
+}

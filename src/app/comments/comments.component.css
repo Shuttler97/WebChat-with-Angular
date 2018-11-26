@@ -1,0 +1,9 @@
+.avtar_comment{
+  height: 30px !important;
+  width: 30px !important;
+  border-radius: 30px;
+
+}
+.comment{
+  padding: 5px;
+}

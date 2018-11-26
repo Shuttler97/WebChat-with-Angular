@@ -1,16 +1,20 @@
 <mat-toolbar>
-  <div fxLayout="row" fxLayoutAlign="center center"  fxLayoutGap="20px" style="width: 100%; padding: 0px auto;">
-    <div style="width: 5%" fxLayout="row" fxLayoutAlign="center center">
-    <mat-icon>
-      sentiment_satisfied
-    </mat-icon>
-    </div>
-      <div style="width: 80%">
-          <input type="text" data-emojiable="true" placeholder="Type a Message">
+  <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="5px" style="width: 100%; padding: 0px auto;">
+    <div style="width: 5%" fxLayout="row" fxLayoutAlign="start center">
+      <button mat-icon-button style="display: inline-block;" (click)="showEmoji()">
+      <mat-icon>sentiment_satisfied</mat-icon>
+    </button></div>
+      <div style="width: 80%;white-space: pre-wrap" fxLayout="row" fxLayoutAlign="start center">
+        <div *ngIf="typeEmoji" fxLayout="row" fxLayoutAlign="start">
+          <emoji-mart    title="Pick your emoji…" emoji="point_up" set="google" (emojiSelect)="addEmoji($event)"
+                     [style]="{ position: 'absolute', bottom: '30px'}" >
+        </emoji-mart>
+        </div>
+ <input #inputText placeholder="Type a message" [(ngModel)]="input">
+        </div>
+        <div style="width: 10%" fxLayout="row" fxLayoutAlign="space-around center">
+      <div [hidden]="!input"><button mat-icon-button (click)="addMessage()"  ><i class="fas fa-paper-plane"></i></button></div>
+          <button mat-icon-button><i class="fas fa-microphone-alt"></i></button>
+        </div>
       </div>
-
-    <div style="width: 5%;" fxLayout="row" fxLayoutAlign="center center">
-      <button mat-icon-button><mat-icon> keyboard_voice</mat-icon></button>
-  </div>
-  </div>
 </mat-toolbar>

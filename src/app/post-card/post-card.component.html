@@ -1,0 +1,73 @@
+
+<div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="50px">
+  <mat-card>
+      <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+      <img src="../../assets/images/avatar2.png" class="image"  >
+        <div fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="1px">
+      <p class="user_header">Username</p>
+          <p class="time" >{{time}}</p>
+        </div>
+    </div>
+    <div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="20px"style="padding: 10px 0px">
+      <ng-content></ng-content>
+   <img src="https://www.planwallpaper.com/static/images/1080p-wallpapers-new.png">
+    </div>
+    <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px" >
+      <div fxLayout="column" fxLayoutAlign="start start">
+      <app-comments style="word-wrap: break-word;word-break: break-all;" *ngFor="let comment of
+       comments">{{comment}}</app-comments>
+    </div>
+    </div>
+    <div style="width:100% ;border-top: 1px solid #cccccc;border-bottom: 1px solid #cccccc;margin: 20px 0px" fxLayout="row" fxLayoutAlign="center center">
+      <div style="width: 50%;" fxLayout="row" fxLayoutAlign="center center" >
+
+        <div class="dropdown">
+          <div class="dropdown-content">
+            <div id="menu">
+               <ul>
+                <li ><ngx-emoji  set="emojione" (click)="thumbsupclicked()"  emoji="thumbsup" size="35" style="cursor: pointer"></ngx-emoji></li>
+                <li ><ngx-emoji  set="emojione" (click)="smileyclicked()"  emoji="smiley" size="35" style="cursor: pointer"></ngx-emoji></li>
+                <li><ngx-emoji   set="emojione" (click)="heartclicked()" emoji="heart_eyes" size="35" style="cursor: pointer"></ngx-emoji></li>
+                <li><ngx-emoji  set="emojione"  (click)="sadclicked()" emoji="white_frowning_face"  size="35" style="cursor: pointer"></ngx-emoji></li>
+                <li><ngx-emoji   set="emojione"   (click)="angryclicked()" emoji="angry" size="35" style="cursor: pointer"></ngx-emoji></li>
+              </ul>
+            </div>
+        </div>
+          <button mat-icon-button  *ngIf="button" (click)="likebuttonclicked()">
+            <i class="far fa-thumbs-up" ></i>Like</button>
+          <button mat-icon-button *ngIf="likebutton" (click)="unlikebuttonclicked()">
+            <img src="../../assets/images/like.png" style="height: 20px;width:20px;font-size: 5px;"><b style="color: #448AFF"> Like</b></button>
+          <div *ngIf="smiley" fxLayout="row"> <ngx-emoji    set="emojione" emoji="smiley" size="30" style="cursor: pointer"></ngx-emoji><a>Haha</a></div>
+          <div *ngIf="heart_eyes" fxLayout="row"> <ngx-emoji    set="emojione"emoji="heart_eyes" size="30" style="cursor: pointer"></ngx-emoji><a>Love</a></div>
+          <div *ngIf="sad" fxLayout="row">  <ngx-emoji   set="emojione"   emoji="white_frowning_face"  size="30" style="cursor: pointer"></ngx-emoji><a>Sad</a></div>
+          <div *ngIf="angry" fxLayout="row">  <ngx-emoji  set="emojione"  emoji="angry" size="30" style="cursor: pointer"></ngx-emoji><a>Angry</a></div>
+        </div>
+      </div>
+
+
+
+      <div style="width: 50%" fxLayout="row" fxLayoutAlign="center center">
+        <button mat-icon-button  (click)="focusInput()"><i class="far fa-comment"></i> Comments  </button>
+      </div>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="start center"  style="width: 100%">
+      <div style="width: 10%">
+      <img src="../../assets/images/avatar2.png" class="avtar_comment" >
+      </div>
+      <div style="width: 70%">
+        <form (submit)="commentPushed()">
+      <input #commentInput placeholder="Type a comment" onfocus="this.placeholder = ''"
+             onblur="this.placeholder = 'Type a comment'"
+             style="border-radius: 50px;width: 100%;height:25px;padding-left: 7px">
+        </form>
+      </div>
+      <div style="width: 20%">
+        <button mat-icon-button ><i class="far fa-smile"></i> </button>
+        <button mat-icon-button (click)="ImageInput.click()">
+          <i class="far fa-images"></i>
+          <input #ImageInput type="file"
+                 accept="image/x-png,image/gif,image/jpeg"  style="display:none;" />
+        </button>
+      </div>
+    </div>
+

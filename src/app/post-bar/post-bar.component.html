@@ -1,0 +1,50 @@
+<div fxLayout="row" fxLayoutAlign="center" style="margin-top: 25px">
+  <mat-card >
+    <div fxLayout="column" fxLayoutAlign="stretch stretch" fxLayoutGap="20px">
+      <div fxLayout="row" fxLayoutAlign="start start">
+        <img src="../../assets/images/avatar2.png" class="image"  >
+      <button  (click)="openDialog()" style="text-align: start; padding:15px 15px 20px 10px; font-size: 18px; width: 100%;
+      color:#616161;cursor: text;border: none; background-color: white ">
+        What's your mind ?</button>
+      </div>
+        <div fxLayout="row" fxLayoutAlign="stretch center" fxLayoutGap="25px">
+        <button class="btn"  (click)="openDialog()">
+          <div fxLayout="row" fxLayoutAlign="center center">
+          <img src="../../assets/images/image_thumbnail.png">Images / Photos
+        <input #ImageInput type="file"
+               accept="image/x-png,image/gif,image/jpeg"  style="display:none;" />
+          </div>
+      </button>
+        <button class="btn"  (click)="openDialog()">
+          <div  fxLayout="row" fxLayoutAlign="center center">
+       <img  src="../../assets/images/attach.png">Links / Docs
+        <input #attachInput type="file"
+               accept="image/x-png,image/gif,image/jpeg"  style="display:none;">
+          </div>
+      </button>
+      <button class="btn"  (click)="openDialog()">
+        <div  fxLayout="row" fxLayoutAlign="center center">
+          <i class="fas fa-ellipsis-h"></i>
+        </div>
+      </button>
+    </div>
+    </div>
+  </mat-card>
+</div>
+<!--to input the file-->
+<!--(change)="onFileInput($event)"-->
+<!--placeholder-->
+<!--<textarea-->
+<!--placeholder="Whats your mind ?"-->
+<!--onfocus="this.placeholder = ''"-->
+<!--onblur="this.placeholder = 'Whats your mind ?'"-->
+<!--#inputText></textarea>-->
+<!--<button mat-flat-button style="background-color: #448AFF;color: white" (click)="postButtonClicked()" >-->
+<!--<p><b>Post</b></p></button>-->
+
+
+
+
+
+
+

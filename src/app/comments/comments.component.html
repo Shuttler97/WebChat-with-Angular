@@ -1,0 +1,34 @@
+<div class="comment" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+  <img src="../../assets/images/avatar2.png" class="avtar_comment" >
+  <div fxLayout="column " fxLayoutAlign="start start" style="font-size: 12px" >
+    <b>Username</b>
+  <ng-content></ng-content>
+     </div>
+  <div fxLayout="row" fxLayoutAlign="end ">
+    <button mat-icon-button *ngIf="button" (click)="likebuttonclicked()"><i class="far fa-thumbs-up"></i></button>
+    <button mat-icon-button *ngIf="likebutton" (click)="unlikebuttonclicked()">
+      <img src="../../assets/images/like.png" style="height: 15px;width:15px;"></button>
+    <button mat-icon-button (click)="replyButtonClicked()"><i class="fas fa-reply"></i></button>
+    <button mat-button *ngIf="!show&&start"  (click)="showallreply()">Show</button>
+    <button mat-button  *ngIf="show&&start" (click)="showallreply()"> Hide</button>
+
+  </div>
+</div><div *ngIf="show">
+<div *ngIf="reply" style="padding-left: 20px;">
+  <div class="comment" fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="10px"  *ngFor="let reply of replies">
+    <img src="../../assets/images/avatar2.png" class="avtar_comment" >
+    <div fxLayout="column " fxLayoutAlign="start start" style="font-size: 12px" >
+      <b>Username</b>
+      {{reply}}
+    </div>
+    <div fxLayout="row" fxLayoutAlign="end ">
+      <button mat-icon-button ><i class="far fa-thumbs-up"></i></button>
+      <button mat-icon-button><i class="far fa-smile"></i></button>
+    </div>
+  </div>
+</div></div>
+
+    <div fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="10px" *ngIf="showReply">
+<app-reply  style="padding-left: 20px;" (pushReply)="updateReply($event)"></app-reply>
+    </div>
+

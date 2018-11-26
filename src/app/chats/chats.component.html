@@ -1,5 +1,15 @@
 <app-chat-info></app-chat-info>
-<div fxLayout="column" fxLayoutAlign=" stretch">
-  <app-chat-message></app-chat-message>
-  <app-message-bar></app-message-bar>
+<div  class="container" style="height: 86vh; overflow:auto;-webkit-transform: rotate(180deg);
+transform: rotate(180deg);
+  direction: rtl;">
+
+ <div  style="-webkit-transform: rotate(180deg);
+transform: rotate(180deg);
+  direction: ltr;padding-bottom: 5px"> <app-chat-message-box
+    *ngFor="let message of messages">
+   <p >{{message}}</p>
+ </app-chat-message-box>
+ </div>
 </div>
+<app-message-bar style="align-self: flex-end" (addNewMessage)="updateMessage($event)"></app-message-bar>
+

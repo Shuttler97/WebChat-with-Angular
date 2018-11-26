@@ -1,0 +1,20 @@
+.avtar_comment{
+  height: 30px !important;
+  width: 30px !important;
+  border-radius: 30px;
+
+}
+placeholder{
+  padding: 10px !important;
+}
+input{
+  background: #FAFAFA;
+  color: #757575;
+  border: 1px solid #cccccc;
+  padding-right:25px;
+}
+input:focus,
+button:focus {
+  outline: none;
+}
+

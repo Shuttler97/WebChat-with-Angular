@@ -18,3 +18,43 @@ input{
   border: 1px solid black;
 
 }
+
+li {
+    padding: 7px;
+   width: 50px;
+  }
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+
+}
+
+.dropdown-content li {
+  display: block;
+}
+.dropdown:hover .dropdown-content
+{
+  display: block;
+
+}
+li.img{
+  width: 60px!important;
+}
+
+
+
+button[mat-icon-button]{
+  width: 50px;
+height: 40px;
+  padding: 0px;
+}

@@ -1,5 +1,13 @@
 <div fxLayout="column" fxLayoutAlign="start stretch" fxLayoutGap="10px">
   <app-profile-header></app-profile-header>
-  <app-search-bar></app-search-bar>
+  <div fxLayout="row" fxLayoutAlign="start center "style="width: 100%;">
+    <div style="width: 10%">
+      <mat-icon>search</mat-icon></div>
+    <div style="width: 90%">
+      <mat-form-field style="width: 90%">
+        <input matInput placeholder="Search or Start a new chat">
+      </mat-form-field>
+    </div>
+  </div>
   <app-user-recent-component></app-user-recent-component>
 </div>

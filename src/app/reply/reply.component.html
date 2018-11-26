@@ -1,0 +1,8 @@
+<div fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="10px">
+  <img src="../../assets/images/avatar2.png" class="avtar_comment" >
+  <form (submit)="replyPushed()">
+    <input #replyInput placeholder="Write a reply" onfocus="this.placeholder = ''"
+           onblur="this.placeholder = 'Write a reply'"
+           style="border-radius: 50px;width: 100%;height:25px;padding-left: 7px">
+  </form>
+</div>

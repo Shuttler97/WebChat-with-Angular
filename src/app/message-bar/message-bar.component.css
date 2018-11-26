@@ -1,9 +1,15 @@
-input[type=text], select {
+input {
+  border-radius: 5px;
+  border:1px solid #cccccc;
   width: 100%;
-  padding: 12px 20px;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  box-sizing: border-box;
+  height: 30px;
+  font-size: 18px;
+  color: #212121;
 }
-
+i{
+  font-size: 22px!important ;
+  color: #616161;
+}
+mat-icon {
+  font-size: 27px !important;
+}
