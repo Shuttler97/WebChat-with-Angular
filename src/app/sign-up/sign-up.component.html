@@ -1,9 +1,9 @@
 <div class="layer">
   <div class="container">
-    <h1 align=center >{{sign? 'SIGNUP': 'LOGIN'}}</h1>
+    <h1 align=center >SIGNUP</h1>
 
     <mat-card>
-      <form [formGroup]="loginForm">
+      <form [formGroup]="signUpForm">
         <div fxLayout="column" fxLayoutAlign="start stretch">
           <div fxLayout="row" fxLayoutAlign="center center " fxLayoutGap="20px">
             <mat-icon>email</mat-icon>
@@ -21,9 +21,6 @@
           </div>
           <div fxLayout="row" fxLayoutGap="20px" fxLayoutAlign="space-around center">
             <button type="button" mat-raised-button color="accent" (click)="signUp()">SIGNUP</button>
-            <button type="button" mat-raised-button color="accent" [disabled]="loginForm.invalid" (click)="login()">
-              LOGIN
-            </button>
           </div>
         </div>
 

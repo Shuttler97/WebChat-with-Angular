@@ -7,15 +7,18 @@ import {MatDialog, MatDialogRef} from "@angular/material";
   styleUrls: ['./add-post.component.css']
 })
 export class AddPostComponent implements OnInit {
-  @ViewChild("inputText") text;
-postText='';
-  constructor(public dialogRef:MatDialogRef<AddPostComponent>) { }
+  @ViewChild('inputText') text;
+  postText = '';
+
+  constructor(public dialogRef: MatDialogRef<AddPostComponent>) {
+  }
 
   ngOnInit() {
   }
-  postButtonClicked(){
-    this.postText=this.text.nativeElement.value;
+
+  postButtonClicked() {
+    this.postText = this.text.nativeElement.value;
     this.dialogRef.close(this.postText);
   }
-
+}
 
