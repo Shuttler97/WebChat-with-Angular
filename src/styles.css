@@ -1,5 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 /*fonts */
 @import 'https://fonts.googleapis.com/css?family=Krub';
 @import 'https://fonts.googleapis.com/css?family=Dosis';
@@ -14,18 +13,6 @@
 
 }
 
-p {
-  font-family: 'Nunito', sans-serif;
-}
-
-.h3 {
-  font-family: 'Nunito', sans-serif;
-}
-
-mat-icon {
-  color: #757575;
-  font-size: 18px;
-}
 .emoji {
   display: inline-block;
 }
