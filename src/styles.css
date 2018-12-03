@@ -26,13 +26,6 @@ mat-icon {
   color: #757575;
   font-size: 18px;
 }
-
-body {
-  background: url("/assets/images/bg-01.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 .emoji {
   display: inline-block;
 }
